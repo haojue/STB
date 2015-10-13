@@ -1,0 +1,78 @@
+<Html>
+<Head>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+var oldValue,oldText;
+
+function catch_keydown(sel){
+switch(event.keyCode) {
+case 13: 
+event.returnValue = false;
+break;
+case 27: 
+sel.options[sel.selectedIndex].text = oldText;
+sel.options[sel.selectedIndex].value = oldValue;
+event.returnValue = false;
+break;
+case 8: 
+var s = sel.options[sel.selectedIndex].text;
+s = s.substr(0,s.length-1);
+if (sel.options[sel.selectedIndex].value==sel.options[sel.selectedIndex].text){
+sel.options[sel.selectedIndex].value=s;
+sel.options[sel.selectedIndex].text=s;
+}
+event.returnValue = false;
+break;
+}
+if (!event.returnValue && sel.onchange)
+sel.onchange(sel)
+}
+
+function catch_press(sel){
+if(sel.selectedIndex>=0){
+var s = sel.options[sel.selectedIndex].text + String.fromCharCode(event.keyCode);
+if (sel.options[sel.selectedIndex].value==sel.options[sel.selectedIndex].text){
+sel.options[sel.selectedIndex].value=s;
+sel.options[sel.selectedIndex].text=s;
+}
+event.returnValue = false;
+if (!event.returnValue && sel.onchange)
+sel.onchange(sel)
+}
+}
+
+function catch_focus(sel) {
+oldText = sel.options[sel.selectedIndex].value;
+oldValue = sel.options[sel.selectedIndex].value;
+}
+
+function selMouseOver(obj){
+with (document.all.div_hint){
+innerText = obj.options[obj.selectedIndex].text;
+if (innerText.length > 0){
+innerText = " " + innerText + "  ";
+style.display = "block";
+style.left = event.clientX + 16;
+style.top = event.clientY;
+}
+}
+}
+
+function selMouseOut(obj){
+with (document.all.div_hint){
+style.display = "none"
+}
+}
+//-->
+</SCRIPT>
+</Head>
+<Body>
+
+<select style='width:130px;z-index:-1' name='tmpSel' onmouseover=selMouseOver(this) onmouseout=selMouseOut(this) onkeydown=catch_keydown(this) onkeypress=catch_press(this) onfocus=catch_focus(this)>
+<option value=''></option>
+</select>
+
+<div id=div_hint style="font-size:12px;color:red;display:none;position:absolute; z-index:2; top:200;background-color: #F7F7F7; layer-background-color: #0099FF; border: 1px #9c9c9c solid;filter:Alpha(style=0,opacity=80,finishOpacity=100);"></div>
+</Body>
+</Html>

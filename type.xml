@@ -1,0 +1,13 @@
+<types>
+	<type type="srx100"><param/></type>
+	<type type="srx220"><param/></type>
+	<type type="srx240"><param/></type>
+	<type type="srx650"><param/></type>
+	<type type="srx1400"><param/></type>
+	<type type="srx3400"><param/></type>
+	<type type="srx3600"><param/></type>
+	<type type="srx5600"><param/></type>
+	<type type="srx5800"><param/></type>
+	<type type="jsr"><param/></type>
+	<type type="vsrx"><param/></type>
+</types>	

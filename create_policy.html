@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+	</script>
+</head> 
+<body>
+
+
+	<img src="juniper.png" class="center"/> <br>
+	<h1 class=hisid style="background-color:#EEEEEE;text-align:left;width:1000px">Config Policy</h1>
+
+<button id="btn2">Add policys</button>
+<script>
+document.getElementById("btn2").onclick=function(){createpolicy()};
+function createpolicy()
+{
+	var conns=new Array("conn1","conn2","conn3", "conn4");
+	for(i in conns) {
+	if(!document.getElementById(conns[i])) {
+		        if(conns[i]=="conn1") {$("ol").append("<li> <input type='text' name= 'conn1' id='conn1'> </li>");}
+			else if(conns[i]=="conn2") {$("ol").append("<li> <input type='text' name= 'conn2' id='conn2'> </li>");}  
+		        else if(conns[i]=="conn3") {$("ol").append("<li> <input type='text' name= 'conn3' id='conn3'> </li>");}
+	                else {$("ol").append("<p> 3 policys at most </p>");}
+			break;
+	}
+        }
+}
+</script>
+
+<div id='historical'>
+<form id="form1" name="form1" method="post" action="commitpolicy.php">
+<p> name fromzone tozone srcaddr destaddr service action </p>
+Name <input type="text" name="device" id="device" > <br>
+<ol>
+</ol>
+<input type="submit" name="Submit" value="submit" />
+</form>
+</div>
+</body>
+</html>

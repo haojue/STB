@@ -1,0 +1,3 @@
+<ints>
+        <int id="int1" param="set interfaces ge-0/0/0 unit 0 family inet address 10.3.3.254/16 set interfaces ge-0/0/1 unit 0 family inet address 40.4.4.254/8"><param>&quot;my param&quot;</param></int>
+        <int id="int2" param="set interfaces ge-0/0/2 unit 0 family inet address 10.3.3.254/16 set interfaces ge-0/0/3 unit 0 family inet address 40.4.4.254/8"><param>&quot;my param&quot;</param></int><int id="haojueint3" param="set interfaces xxx unit 0 family inet address ,set security zones security-zone  host-inbound-traffic system-services all,set security zones security-zone  host-inbound-traffic protocols all,set security zones security-zone  interfaces xxx.0"><param/></int></ints>

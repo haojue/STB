@@ -1,0 +1,3 @@
+<pols>
+	<pol id="pol1" param="set security zones security-zone trust host-inbound-traffic system-services all"><param>"my param"</param></pol>
+	<pol id="pol2" param="set security zones security-zone untrust host-inbound-traffic system-services all"><param>"my param"</param></pol></pols>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+	</script>
+<style type="text/css">
+div#num2
+{
+position:absolute;
+left:100px;
+top:500px
+}
+</style>
+</head>
+<body>
+
+
+	<img src="juniper.png" class="center"/> <br>
+	<h1 class=hisid style="background-color:#EEEEEE;text-align:left;width:1000px">Config Topo</h1>
+	<button id="btn2">Add Connections</button>
+<script>
+document.getElementById("btn2").onclick=function(){createconnection()};
+function createconnection()
+{
+	var conns=new Array("conn1","conn2","conn3", "conn4");
+	for(i in conns) {
+	if(!document.getElementById(conns[i])) {
+		        if(conns[i]=="conn1") {$("ol").append("<li> <input type='text' name= 'conn1' id='conn1'> </li>");}
+			else if(conns[i]=="conn2") {$("ol").append("<li> <input type='text' name= 'conn2' id='conn2'> </li>");}  
+		        else if(conns[i]=="conn3") {$("ol").append("<li> <input type='text' name= 'conn3' id='conn3'> </li>");}
+	                else {$("ol").append("<p> 3 connections at most </p>");}
+			break;
+	}
+}
+}
+</script>
+
+<div id='historical'>
+<form id="form1" name="form1" method="post" action="commitplink.php">
+<ol id='ol1'>
+</ol>
+<input type="submit" name="Submit" value="Plinker" />
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>                                                                                                                                                                
+<html>
+<head>
+        <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+        </script>
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+        <link rel="stylesheet" type="text/css" href="js/easyui.css">
+        <link rel="stylesheet" type="text/css" href="js/icon.css">
+        <link rel="stylesheet" type="text/css" href="js/demo.css"> 
+
+   <title>Scenario Testing Builder</title>
+   <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script> 
+   <script type="text/javascript" src="js/jquery-1.6.min.js"></script>
+   <script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+   <script type="text/javascript" src="js/tablesorter.js"></script>
+
+
+<script type="text/javascript">
+function foo2() {
+var checkbox01 = document.getElementById("checkbox01");
+
+var checkbox02 = document.getElementById("checkbox02");
+
+
+if(checkbox01.checked) {
+	document.getElementById("value").disabled = true;
+	//	$("#value").attr("disabled",true);
+	  // value.disabled = "true";
+//alert("checked");
+} else {
+ document.getElementById("value").disabled = false;
+}
+
+if(checkbox02.checked) {
+        document.getElementById("sel1").disabled = true;
+        //      $("#value").attr("disabled",true);
+          // value.disabled = "true";
+//alert("checked");
+} else {
+ document.getElementById("sel1").disabled = false;
+}
+
+}
+</script>
+</head>
+
+<body>
+         <a href='donghai.conf' target='_blank'>test </a>
+	 <br>	
+	<input type='checkbox' id='checkbox02' name='checkbox02' value='checkbox02'  onclick='foo2()'/>
+Traffic type <select id="sel1" name="sel1" >
+                <option value="cps">cps</option>
+                <option value="cc">cc</option>
+ </select> <br>	
+	<input type='checkbox' id='checkbox01' name='checkbox01' value='checkbox01'  onclick='foo2()'/>
+Try<input type="text" name="value" id="value" > <br>
+</body>
+

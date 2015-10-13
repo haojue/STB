@@ -1,0 +1,3 @@
+<mods>
+	<mod id="mod1" param="set security utm feature-profile anti-spam traceoptions flag all"><param>"my param"</param></mod>
+	<mod id="mod2" param="set security utm feature-profile anti-spam sbl profile as-profile sbl-default-server"><param>"my param"</param></mod></mods>

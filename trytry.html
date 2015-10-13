@@ -1,0 +1,60 @@
+    <html>  
+        <head>  
+            <title></title>  
+              
+            <script>  
+            function getDateDemo(){  
+                /*  
+                  
+                    //????  
+                    var date = new Date();  
+                    alert(date);//????  
+                    alert(date.toLocaleString());//???????  
+                    alert(date.getFullYear());//????  
+                    alert(date.getMonth() + 1);//???? 0-11,???1  
+                    alert(date.getDate());//????????  
+                    alert(date.getDay());//???????,???  
+                    alert(date.getHours());//??????  
+                    alert(date.getMinutes());//??????  
+                    alert(date.getSeconds());//??????  
+                    alert(date.getMilliseconds());//????????  
+                    alert(date.getTime());//???1970?1?1?????,?????????  
+                */    
+                    //???????????????  
+                    var myDate = new Date();  
+                    var year = myDate.getFullYear();  
+                    var month = myDate.getMonth() + 1;  
+                    var date = myDate.getDate();  
+                    var hours = myDate.getHours();  
+                    var minutes = myDate.getMinutes();  
+                    var seconds = myDate.getSeconds();  
+                      
+                    //???????????09?  
+                    if(month < 10 ){  
+                        month = "0" + month;  
+                    }  
+                    if(date < 10 ){  
+                        date = "0" + date;  
+                    }  
+                      
+                    //????  
+                    var dateTime = year + "?" + month + "?" + date + "?" + hours + "?" + minutes + "?" + seconds + "?";  
+                      
+                    //document.write(dateTime);//??????  
+                      
+                    var divNode = document.getElementById("time");  
+                    divNode.innerHTML = dateTime;  
+                  
+            }     
+            window.setInterval("getDateDemo()",1000);//??1?,????getDateDemo()  
+          
+                  
+            </script>  
+      
+        </head>  
+          
+        <body>  
+            <div id="time"></div>  
+        </body>  
+      
+    </html>  

@@ -1,0 +1,7 @@
+<traffs>
+	<traff name="Breaking Point" type="bps" ip="10.208.10.10"><param></param></traff>
+	<traff name="Ixia IxiaLoad" type="ixiaewf" ip="10.208.20.20"><param></param></traff>
+	<traff name="Ixia Explorer" type="ixiascreen" ip="10.208.30.30"><param></param></traff>
+	<traff name="Test Center" type="testcenter" ip="10.208.10.10"><param></param></traff>
+	<traff name="Land Slide" type="landslide" ip="10.208.10.10"><param></param></traff>
+</traffs>
